@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A44C936A-C593-402A-B3FD-B6B32AD9018B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>JFrogTFSPlugin</RootNamespace>
+    <AssemblyName>JFrogTFSPlugin</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.TeamFoundation.Build.Client, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\ReferenceAssemblies\v2.0\Microsoft.TeamFoundation.Build.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Build.Workflow, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\PrivateAssemblies\Microsoft.TeamFoundation.Build.Workflow.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Client, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Activities" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Activities\JFrogArtifactoryDeployer.cs" />
+    <Compile Include="CustomTypes\ArtifactoryConfigurationEditor.cs" />
+    <Compile Include="Library\ArtefactsHelpers\BuildInfoExtractor.cs" />
+    <Compile Include="Library\ArtefactsHelpers\MatchArtifactHelper.cs" />
+    <Compile Include="Library\ArtefactsHelpers\MD5CheckSum.cs" />
+    <Compile Include="Library\ArtefactsHelpers\Sha1Reference.cs" />
+    <Compile Include="Library\ArtefactDeployer.cs" />
+    <Compile Include="Library\Artifactory\Agent.cs" />
+    <Compile Include="Library\Artifactory\AgentTFS.cs" />
+    <Compile Include="Library\Artifactory\Artifact.cs" />
+    <Compile Include="CustomTypes\ArtifactoryConfiguration.cs" />
+    <Compile Include="CustomTypes\ArtifactoryConfigurationDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomTypes\ArtifactoryConfigurationDialog.Designer.cs">
+      <DependentUpon>ArtifactoryConfigurationDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Library\Artifactory\BlackDuckGovernance.cs" />
+    <Compile Include="Library\Artifactory\Build.cs" />
+    <Compile Include="Library\Artifactory\BuildRetention.cs" />
+    <Compile Include="Library\Artifactory\Dependency.cs" />
+    <Compile Include="Library\Artifactory\DeployDetails.cs" />
+    <Compile Include="Library\Artifactory\LicenseControl.cs" />
+    <Compile Include="Library\Artifactory\Module.cs" />
+    <Compile Include="Library\ArtefactsHelpers\BuildInfoLog.cs" />
+    <Compile Include="CustomTypes\ProxyConfiguration.cs" />
+    <Compile Include="Library\Utils\ArtifactoryHttpClient.cs" />
+    <Compile Include="Library\Utils\CustomWebClient.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Library\Utils\HTTPResponse.cs" />
+    <Compile Include="Library\Utils\PreemptiveHttpClient.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CustomTypes\ArtifactoryConfigurationDialog.resx">
+      <DependentUpon>ArtifactoryConfigurationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="resources\jfrog.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

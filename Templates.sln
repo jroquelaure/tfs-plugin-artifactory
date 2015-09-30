@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.22823.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Templates", "Templates\Templates.csproj", "{6AF1C353-C3B6-4662-93A3-2AB0C2C5BCE0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JFrogTFSPlugin", "BuildTasks\JFrogTFSPlugin.csproj", "{A44C936A-C593-402A-B3FD-B6B32AD9018B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JFrogTFSPluginTests", "CustomActivitiesTests\JFrogTFSPluginTests.csproj", "{C5D145DB-C07F-49FE-9892-993A7A7C33C9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6AF1C353-C3B6-4662-93A3-2AB0C2C5BCE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AF1C353-C3B6-4662-93A3-2AB0C2C5BCE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AF1C353-C3B6-4662-93A3-2AB0C2C5BCE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AF1C353-C3B6-4662-93A3-2AB0C2C5BCE0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A44C936A-C593-402A-B3FD-B6B32AD9018B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A44C936A-C593-402A-B3FD-B6B32AD9018B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A44C936A-C593-402A-B3FD-B6B32AD9018B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A44C936A-C593-402A-B3FD-B6B32AD9018B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5D145DB-C07F-49FE-9892-993A7A7C33C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5D145DB-C07F-49FE-9892-993A7A7C33C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5D145DB-C07F-49FE-9892-993A7A7C33C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5D145DB-C07F-49FE-9892-993A7A7C33C9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 4
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://192.168.222.132:8080/tfs/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Templates\\Templates.csproj
+		SccProjectName1 = Templates
+		SccLocalPath1 = Templates
+		SccProjectUniqueName2 = BuildTasks\\JFrogTFSPlugin.csproj
+		SccProjectName2 = BuildTasks
+		SccLocalPath2 = BuildTasks
+		SccProjectUniqueName3 = CustomActivitiesTests\\JFrogTFSPluginTests.csproj
+		SccProjectName3 = CustomActivitiesTests
+		SccLocalPath3 = CustomActivitiesTests
+	EndGlobalSection
+EndGlobal
